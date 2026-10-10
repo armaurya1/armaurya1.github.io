@@ -6,14 +6,14 @@
 .home-page{min-height:100vh;background:#fff;color:#17243b;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 .landing-header{height:72px;padding:0 clamp(22px,4.7vw,48px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #edf0f5;background:#fff}
 .landing-brand{display:inline-flex;align-items:center;gap:10px;color:#17243b;font-size:20px;font-weight:700;letter-spacing:-.35px}
-.landing-brand img{display:block;width:36px;height:36px;object-fit:cover;border-radius:0}
+.landing-brand-icon{position:relative;display:block;width:36px;height:36px;flex:0 0 36px;overflow:hidden}.landing-brand-icon img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}
 .landing-nav{display:flex;align-items:center;gap:32px;color:#667085;font-size:14px}
 .landing-nav a,.landing-footer a{transition:color .16s ease}
 .landing-nav a:hover,.landing-footer a:hover{color:#2463eb}
 .landing-main{position:relative;display:flex;justify-content:center;min-height:796px;padding:100px 24px 130px;overflow:hidden;background:#fff}
 .landing-content{position:relative;z-index:1;display:flex;width:min(760px,100%);flex-direction:column;align-items:center;gap:32px;text-align:center}
 .landing-logo-frame{display:grid;width:144px;height:144px;flex:0 0 144px;place-items:center}
-.landing-app-logo{display:block;width:84px;height:84px;object-fit:cover;border-radius:18px}
+.landing-app-logo{position:relative;display:block;width:100%;height:100%;overflow:hidden}.landing-app-logo img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}
 .landing-introduction{display:flex;width:100%;flex-direction:column;align-items:center;gap:24px}
 .landing-introduction h1{margin:0;color:#17243b;font-size:clamp(40px,5.5vw,56px);font-weight:400;line-height:1.14;letter-spacing:-.045em}
 .landing-introduction h1 span{color:#2463eb}
@@ -37,7 +37,7 @@
   .landing-main{min-height:680px;padding:72px 20px 92px}
   .landing-content{gap:22px}
   .landing-logo-frame{width:112px;height:112px;flex-basis:112px}
-  .landing-app-logo{width:76px;height:76px;border-radius:16px}
+  
   .landing-introduction{gap:18px}
   .landing-introduction h1{font-size:clamp(34px,8vw,48px)}
   .landing-introduction>p{font-size:16px}
@@ -48,7 +48,7 @@
 @media(max-width:390px){
   .landing-header{padding-inline:14px}
   .landing-brand{gap:7px;font-size:16px}
-  .landing-brand img{width:28px;height:28px}
+  .landing-brand-icon{width:28px;height:28px;flex-basis:28px}
   .landing-nav{gap:10px;font-size:10px}
   .landing-main{padding-inline:18px}
   .landing-introduction h1{font-size:clamp(31px,8vw,36px)}
