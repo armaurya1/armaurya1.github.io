@@ -28,7 +28,7 @@
 .landing-dots{position:absolute;width:230px;height:310px;pointer-events:none;background-image:radial-gradient(circle,#eaf1ff 1px,transparent 1.3px);background-size:20px 20px}
 .landing-dots-left{top:156px;left:clamp(22px,5.3vw,76px)}
 .landing-dots-right{top:304px;right:clamp(22px,5.1vw,74px)}
-.landing-footer{height:104px;display:flex;align-items:center;justify-content:center;gap:32px;border-top:1px solid #edf0f5;background:#fff;color:#667085;font-size:14px}
+.landing-footer{height:104px;display:flex;align-items:center;justify-content:center;gap:32px;border-top:1px solid #edf0f5;background:#f5f8ff;color:#667085;font-size:14px}
 .footer-separator{width:3px;height:3px;border-radius:50%;background:#2463eb}
 .home-page a:focus-visible{outline:3px solid #93b4f0;outline-offset:4px;border-radius:2px}
 @media(max-width:700px){
