@@ -87,7 +87,7 @@ header {
 
 .zw-product-header {
     background: var(--bg-page);
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .zw-product-header .content-wrap {
@@ -98,11 +98,12 @@ header {
     padding: 10px 40px;
     max-width: 1600px;
     margin: 0 auto;
-    transition: border-bottom 0.25s ease;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.25s ease;
 }
 
 .zw-product-header .content-wrap.active {
-    border-bottom: 1px solid var(--border-color);
+    border-bottom-color: var(--border-color);
 }
 
 .brand-link {
@@ -1281,6 +1282,10 @@ footer.zwf-new-footer {
 }
 
 @media only screen and (max-width: 991px) {
+    html,
+    body {
+        overscroll-behavior-y: none;
+    }
     header {
         position: fixed;
         inset: 0 0 auto;
