@@ -1285,6 +1285,7 @@ footer.zwf-new-footer {
     html,
     body {
         overscroll-behavior: none;
+        touch-action: pan-y pinch-zoom;
     }
     header {
         position: fixed;
