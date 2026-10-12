@@ -1435,10 +1435,33 @@ footer.zwf-new-footer {
     }
     .zwc-banner-qr { display: none !important; }
     .zwc-grid-content-wrap h2 { font-size: 34px !important; }
-    .zwc-lang-imgwrap { margin: 60px 0 !important; padding: 80px 0 120px !important; }
+    .zwc-lang-imgwrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        margin: 48px 0 !important;
+        padding: 36px 0 12px !important;
+    }
+    .zwc-langimg-iwrap {
+        width: 100%;
+        justify-content: center;
+    }
     .zwc-lang-dual-img {
         max-width: 245px !important;
+        width: 100%;
         margin: 0 auto !important;
+    }
+    .feature-chip-list {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
     }
     .zwc-langimg-iwrap .img1,
     .zwc-langimg-iwrap .img2 {
@@ -1447,7 +1470,21 @@ footer.zwf-new-footer {
     .sectionactive .zwc-langimg-iwrap .img1 {
         transform: translate(25px, 40px) !important;
     }
-    .zwc-lang-text { font-size: 14px !important; padding: 6px 14px !important; }
+    .zwc-lang-text {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        font-size: 13px !important;
+        line-height: 1.35;
+        padding: 7px 11px !important;
+        border-radius: 999px !important;
+    }
     .sectionactive .zwc-hindi1,
     .sectionactive .zwc-hindi2,
     .sectionactive .zwc-punjabi,
@@ -1464,6 +1501,12 @@ footer.zwf-new-footer {
     .sectionactive .zwc-gujarati { left: 18% !important; bottom: 0 !important; }
     .sectionactive .zwc-telugu { right: 6% !important; bottom: 0 !important; top: unset !important; }
     .sectionactive .zwc-malayalam { right: 2% !important; bottom: 14% !important; left: unset !important; }
+    .feature-chip-list .zwc-lang-text {
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+    }
     .zwc-business-section h2 { font-size: 32px !important; }
     .zwc-business-section p { font-size: 16px !important; }
     .zwc-business-img img { max-width: 260px !important; }
