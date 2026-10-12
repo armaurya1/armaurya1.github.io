@@ -1,71 +1,179 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Learn how to request deletion of your DropOwl account and associated personal data.">
-  <link rel="canonical" href="https://dropowl.me/delete-account.html">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="DropOwl">
-  <meta property="og:title" content="Delete Your Account | DropOwl">
-  <meta property="og:description" content="Learn how to request deletion of your DropOwl account and associated personal data.">
-  <meta property="og:url" content="https://dropowl.me/delete-account.html">
-  <meta name="twitter:card" content="summary">
-  <title>Delete Your Account | DropOwl</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=1">
-  <link rel="icon" href="/favicon.ico?v=1" sizes="any">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="DropOwl home"><img class="brand-mark" src="assets/dropowl-icon.jpg?v=2" alt=""><span>DropOwl</span></a>
-    <nav class="main-nav" id="site-nav" aria-label="Main navigation"><a href="index.html#features">Features</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a class="nav-cta" href="index.html#download">Google Play <span>Coming soon</span></a></nav>
-    <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false"><span aria-hidden="true">☰</span></button>
-  </header>
-  <main class="legal-main wrap" id="main-content">
-    <a class="back-link" href="index.html">← Back to DropOwl</a>
-    <div class="legal-eyebrow"><span class="eyebrow-dot"></span> YOUR ACCOUNT, YOUR CHOICE</div>
-    <h1>Delete your<br><span>account</span></h1>
-    <p class="legal-lede">You can ask us to delete your DropOwl account and the personal data associated with it. The request is handled by email.</p>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Delete Your Account | DropOwl</title>
+    <meta name="description" content="Learn how to request deletion of your DropOwl account and associated personal data.">
+    <link rel="icon" href="assets/brand-logo-icon.png" type="image/png">
     
-    <section class="request-panel">
-      <div class="request-count">01 <span>·</span> SEND YOUR REQUEST</div>
-      <h2>Tell us which account to remove.</h2>
-      <p>Send an email from the address linked to your DropOwl account. Include your DropOwl username and use <strong>DropOwl account deletion</strong> as the subject. Please do not include your password or sign-in codes.</p>
-      <a class="request-button" href="mailto:info@dropowl.me?subject=DropOwl%20account%20deletion&body=Please%20delete%20my%20DropOwl%20account.%0A%0AUsername%3A%20%0AEmail%20used%20for%20my%20account%3A%20">Email a deletion request <span aria-hidden="true">↗</span></a>
-      <span class="email-placeholder">info@dropowl.me</span>
-    </section>
-    <section class="request-steps">
-      <article><span>02</span><div><h3>We verify it’s you</h3><p>We may reply to confirm the request using the email address associated with your account.</p></div></article>
-      <article><span>03</span><div><h3>We process the request</h3><p>After verification, we’ll remove your account and associated personal data from active DropOwl systems, except where retention is required for legal, security or fraud-prevention reasons.</p></div></article>
-    </section>
-    <p class="legal-footnote">If you can’t access the email address on your account, explain that in your request. We may ask for other information to verify account ownership. Signing out or uninstalling the app does not submit a deletion request.</p>
-  </main>
-  <footer class="site-footer"><div class="footer-main wrap"><a class="brand footer-brand" href="index.html"><img class="brand-mark" src="assets/dropowl-icon.jpg?v=2" alt=""><span>DropOwl</span></a><p>Deals, coupons and gift cards.</p><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="delete-account.html">Account deletion</a><a href="mailto:info@dropowl.me">Contact</a></div></div><div class="footer-bottom wrap"><span>© 2026 DropOwl. All rights reserved.</span><span>We’ll keep your request focused on account deletion.</span></div></footer>
-<script>
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.main-nav');
-    if (toggle && nav) {
-      const closeMenu = () => {
-        nav.classList.remove('nav-open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open menu');
-      };
-      toggle.addEventListener('click', () => {
-        const open = nav.classList.toggle('nav-open');
-        toggle.setAttribute('aria-expanded', String(open));
-        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      });
-      nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-      document.addEventListener('keydown', event => {
-        if (event.key === 'Escape') closeMenu();
-      });
-    }
-  </script>
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Delete Your Account | DropOwl">
+    <meta property="og:description" content="Learn how to request deletion of your DropOwl account and associated personal data.">
+    <meta property="og:image" content="assets/brand-logo-icon.png">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="zw-page-6946 i18n-en">
+
+    <!-- Top Navigation Header -->
+    <header>
+        <div class="zw-product-header">
+            <div class="content-wrap zw-flex">
+                <div class="product-title">
+                    <a href="index.html" aria-label="DropOwl Home" class="brand-link">
+                        <img class="product-icon brand-logo-icon" alt="DropOwl Logo" src="assets/brand-logo-icon.png">
+                        <span class="brand-title-text">DropOwl</span>
+                    </a>
+                </div>
+
+                <div class="product-nav-links desktop-view">
+                    <ul class="arattai-menu menu nav zw-flex">
+                        <li class="leaf zmenu-features">
+                            <a href="index.html#features">Features</a>
+                        </li>
+                        <li class="leaf zmenu-faq">
+                            <a href="index.html#faq">FAQ</a>
+                        </li>
+                        <li class="leaf zmenu-privacy">
+                            <a href="privacy.html">Privacy</a>
+                        </li>
+                        <li class="leaf zmenu-terms">
+                            <a href="terms.html">Terms</a>
+                        </li>
+                        <li class="leaf zmenu-download zwc-menu-btn">
+                            <a href="index.html#download">Get App · Soon</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="header-mobile-right mobile-view">
+                    <a class="zwc-menu-btn zmenu-download-small" href="index.html#download">Get App</a>
+                    <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div class="mobile-drawer" id="mobileDrawer">
+            <div class="drawer-content">
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html#features" class="mobile-nav-item">Features</a></li>
+                    <li><a href="index.html#faq" class="mobile-nav-item">FAQ</a></li>
+                    <li><a href="privacy.html" class="mobile-nav-item">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="mobile-nav-item">Terms of Use</a></li>
+                    <li><a href="delete-account.html" class="mobile-nav-item" style="color: #2563eb; font-weight: 700;">Account Deletion</a></li>
+                </ul>
+                <div class="mobile-cta-group">
+                    <a class="zwc-download-cta zwc-blackfill-cta" href="index.html#download">Get App · Soon</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="zwc-template-inner">
+        <div class="zwc-pagewrapper">
+            <div class="legal-main">
+                <a class="back-link" href="index.html">← Back to DropOwl</a>
+                <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR ACCOUNT, YOUR CHOICE</div>
+                <h1>Delete your<br><span>account</span></h1>
+                <p class="legal-lede">You can ask us to delete your DropOwl account and the personal data associated with it. The request is handled by email.</p>
+
+                <section class="request-panel">
+                    <div class="request-count">01 <span>·</span> SEND YOUR REQUEST</div>
+                    <h2>Tell us which account to remove.</h2>
+                    <p>Send an email from the address linked to your DropOwl account. Include your DropOwl username and use <strong>DropOwl account deletion</strong> as the subject. Please do not include your password or sign-in codes.</p>
+                    <a class="request-button" href="mailto:info@dropowl.me?subject=DropOwl%20account%20deletion&body=Please%20delete%20my%20DropOwl%20account.%0A%0AUsername%3A%20%0AEmail%20used%20for%20my%20account%3A%20">Email a deletion request ↗</a>
+                    <span class="email-placeholder">info@dropowl.me</span>
+                </section>
+
+                <section class="request-steps">
+                    <article>
+                        <span>02</span>
+                        <div>
+                            <h3>We verify it’s you</h3>
+                            <p>We may reply to confirm the request using the email address associated with your account.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <span>03</span>
+                        <div>
+                            <h3>We process the request</h3>
+                            <p>After verification, we’ll remove your account and associated personal data from active DropOwl systems, except where retention is required for legal, security or fraud-prevention reasons.</p>
+                        </div>
+                    </article>
+                </section>
+
+                <p class="legal-footnote">If you can’t access the email address on your account, explain that in your request. We may ask for other information to verify account ownership. Signing out or uninstalling the app does not submit a deletion request.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="zwf-new-footer">
+        <div class="content-wrap">
+            <div class="footer-links-grid">
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html#features">Deals & Coupons</a></li>
+                        <li><a href="index.html#features">Save Favorites</a></li>
+                        <li><a href="index.html#features">Community Picks</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Legal & Privacy</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                        <li><a href="delete-account.html" style="color: #2563eb; font-weight: 600;">Account Deletion</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <ul>
+                        <li><a href="mailto:info@dropowl.me">✉ info@dropowl.me</a></li>
+                        <li><a href="index.html#download">Android App (Coming Soon)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom-row">
+                <div class="footer-contacts">
+                    <a href="mailto:info@dropowl.me">✉ info@dropowl.me</a>
+                    <span style="color: #64748b; font-size: 14px;">Prices and offers are set by retailers and can change.</span>
+                </div>
+                <div class="footer-social-icons">
+                    <img src="assets/brand-logo-icon.png" width="28" height="31" alt="DropOwl">
+                </div>
+            </div>
+
+            <div class="footer-legal">
+                <div class="legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Use</a>
+                    <a href="delete-account.html">Account Deletion</a>
+                </div>
+                <p class="copyright">&copy; 2026 DropOwl. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script src="js/script.js"></script>
 </body>
 </html>
-
-
-
