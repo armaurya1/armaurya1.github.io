@@ -41,7 +41,7 @@ body {
     font-family: var(--zf-primary-regular);
     font-size: 16px;
     line-height: 1.5;
-    overflow-x: hidden;
+    overflow-x: clip;
     width: 100%;
 }
 
@@ -1284,7 +1284,7 @@ footer.zwf-new-footer {
 @media only screen and (max-width: 991px) {
     html,
     body {
-        overscroll-behavior-y: none;
+        overscroll-behavior: none;
     }
     header {
         position: fixed;
