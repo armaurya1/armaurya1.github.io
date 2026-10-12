@@ -1281,6 +1281,31 @@ footer.zwf-new-footer {
 }
 
 @media only screen and (max-width: 991px) {
+    header {
+        position: fixed;
+        inset: 0 0 auto;
+        width: 100%;
+    }
+    body > header + main {
+        padding-top: 68px;
+    }
+    body > header + main.legal-main {
+        margin-top: 0;
+    }
+    html {
+        scroll-padding-top: 76px;
+    }
+    .zw-product-header .content-wrap {
+        min-height: 68px;
+        padding: 10px 20px;
+    }
+    .product-title {
+        min-width: 0;
+    }
+    .header-mobile-right {
+        flex: 0 0 auto;
+        align-items: center;
+    }
     .desktop-view { display: none !important; }
     .mobile-view { display: flex !important; }
     .zmenu-download-small {
@@ -1298,7 +1323,6 @@ footer.zwf-new-footer {
     .zmenu-download-small:hover {
         background-color: #1d4ed8 !important;
     }
-    .mobile-menu-toggle { display: flex !important; }
     .zwc-banner-iwrap { flex-direction: column; text-align: center; }
     .zwc-banner-contentwrap {
         width: 100% !important;
