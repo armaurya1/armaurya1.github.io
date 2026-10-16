@@ -30,6 +30,8 @@ jobs:
           repository: armaurya1/Dealhunt
           ref: main
           path: app
+          token: ${{ secrets.DROPOWL_SOURCE_TOKEN || github.token }}
+          persist-credentials: false
       - uses: actions/checkout@v4
         with:
           repository: armaurya1/armaurya1.github.io
