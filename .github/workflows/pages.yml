@@ -45,8 +45,8 @@ jobs:
       - run: npm run typecheck
       - run: npm run lint
       - run: npm test
-      - run: npm audit --omit=dev --audit-level=high
-      - run: npm run build:web -- --website-dir ../website
+      - name: Build and audit production web artifact
+        run: npm run build:web -- --website-dir ../website
       - uses: actions/upload-pages-artifact@v3
         with:
           path: app/dist
