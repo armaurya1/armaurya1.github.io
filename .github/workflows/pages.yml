@@ -1,0 +1,75 @@
+name: Publish DropOwl
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      production_auth_verified:
+        description: 'Production sign-in, Supabase session access and administrator identity verified on dropowl.me'
+        type: boolean
+        required: true
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: armaurya1/Dealhunt
+          ref: main
+          path: app
+      - uses: actions/checkout@v4
+        with:
+          repository: armaurya1/armaurya1.github.io
+          path: website
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - run: npm audit --omit=dev --audit-level=high
+      - run: npm run build:web -- --website-dir ../website
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/dist
+      - name: Package Chrome extension
+        working-directory: app/dropowl-extension
+        run: |
+          mkdir -p ../releases
+          version=$(node -p "require('./manifest.json').version")
+          zip -r "../releases/dropowl-extension-${version}.zip" manifest.json background.js content.js popup.html popup.js popup.css assets/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dropowl-extension
+          path: app/releases/dropowl-extension-*.zip
+          if-no-files-found: error
+  deploy:
+    if: github.repository == 'armaurya1/armaurya1.github.io' && github.event_name == 'workflow_dispatch' && inputs.production_auth_verified
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
