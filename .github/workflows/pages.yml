@@ -5,6 +5,11 @@ on:
     branches: [main]
   workflow_dispatch:
     inputs:
+      login_bootstrap:
+        description: 'Publish only production sign-in and the existing website; no application routes'
+        type: boolean
+        required: true
+        default: false
       production_auth_verified:
         description: 'Production sign-in, Supabase session access and administrator identity verified on dropowl.me'
         type: boolean
@@ -47,9 +52,12 @@ jobs:
       - run: npm test
       - name: Build and audit production web artifact
         run: npm run build:web -- --website-dir ../website
+      - name: Prepare isolated sign-in bootstrap
+        if: github.event_name == 'workflow_dispatch' && inputs.login_bootstrap
+        run: node scripts/build-web-release.cjs --login-bootstrap --website-dir ../website
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: app/dist
+          path: ${{ github.event_name == 'workflow_dispatch' && inputs.login_bootstrap && 'app/login-dist' || 'app/dist' }}
       - name: Package Chrome extension
         working-directory: app/dropowl-extension
         run: |
@@ -62,7 +70,7 @@ jobs:
           path: app/releases/dropowl-extension-*.zip
           if-no-files-found: error
   deploy:
-    if: github.repository == 'armaurya1/armaurya1.github.io' && github.event_name == 'workflow_dispatch' && inputs.production_auth_verified
+    if: github.repository == 'armaurya1/armaurya1.github.io' && github.event_name == 'workflow_dispatch' && (inputs.login_bootstrap || inputs.production_auth_verified)
     needs: build
     runs-on: ubuntu-latest
     permissions:
